@@ -2,7 +2,7 @@ class CharactersController < ApplicationController
 
     def index
         characters = Character.all
-        render json: CharacterSerializer.new(races)
+        render json: CharacterSerializer.new(characters)
     end
 
     def create 

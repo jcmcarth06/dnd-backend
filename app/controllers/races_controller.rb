@@ -7,11 +7,11 @@ class RacesController < ApplicationController
 
     def show 
         race = Race.find_by(id: params[:id])
-        render RaceSerializer.new(race.sample)
+        # render RaceSerializer.new(races)
     end
 
     def create
-        race = Race.new(race_params) //write uniqueness validator
+        # race = Race.new(race_params) //write uniqueness validator
         race.save
         render json: RaceSerializer.new(race)
     end
@@ -21,5 +21,5 @@ class RacesController < ApplicationController
     def race_params
         params.require(:race).permit(:name, :image_link)
     end
-    
+
 end
