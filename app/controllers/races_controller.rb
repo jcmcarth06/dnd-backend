@@ -1,23 +1,25 @@
 class RacesController < ApplicationController
 
     def index
-        races = Race.ApplicationControllerrender json: RaceSerializer.new(races)
+        races = Race.all 
+        render json: RaceSerializer.new(races)
     end
 
     def show 
-        races = Character.find_by(name: params[character_name]).races
-        render RaceSerializer.new(races.sample)
+        race = Race.find_by(id: params[:id])
+        render RaceSerializer.new(race.sample)
     end
 
     def create
-        race = Race.new(race_params)
-        characters = params[:characters].map { |character| Character.find_or_create_by(name: character) }
-        race.characters << characters
+        race = Race.new(race_params) //write uniqueness validator
         race.save
         render json: RaceSerializer.new(race)
     end
 
     private
 
-    def race_paramsparams.require(:rae).permit(:name, :image_link)
+    def race_params
+        params.require(:race).permit(:name, :image_link)
+    end
+    
 end
