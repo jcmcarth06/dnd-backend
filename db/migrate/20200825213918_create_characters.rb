@@ -4,11 +4,11 @@ class CreateCharacters < ActiveRecord::Migration[6.0]
       t.belongs_to :race
       t.string :name
       t.integer :age
+      t.string :affiliation
       t.string :appearance
       t.string :personality
       t.string :background
-      t.string :affiliation
-
+      
       t.timestamps
     end
   end
