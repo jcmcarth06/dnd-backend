@@ -6,14 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-r1 = Race.create(name: "Human", image_link: "https://www.pngfind.com/pngs/m/185-1858739_fantasy-women-warrior-png-file-d-d-human.png")
-r2 = Race.create(name: "Halfling", image_link: "https://i7.pngguru.com/preview/933/92/981/dungeons-dragons-sword-coast-legends-halfling-role-playing-game-dwarf.jpg")
+r1 = Race.create(name: "Human", image_link: "https://www.nicepng.com/png/detail/79-797443_these-were-the-stories-of-a-restless-people.png")
+r2 = Race.create(name: "Halfling", image_link: "https://p.kindpng.com/picc/s/424-4249609_female-lightfoot-halfling-rogue-hd-png-download.png")
 r3 = Race.create(name: "Elf", image_link: "https://www.uokpl.rs/fpng/f/426-4263258_elf-png-image.png")
-r4 = Race.create(name: "Goblin", image_link: "https://i7.pngguru.com/preview/975/973/216/orcs-and-goblins-dungeons-dragons-ogre-others.jpg")
+r4 = Race.create(name: "Goblin", image_link: "https://www.pngfind.com/pngs/m/16-169424_view-samegoogleiqdbsaucenao-600px-goblin-goblin-png-transparent-png.png")
 r5 = Race.create(name: "Dark Elf", image_link: "https://i7.pngguru.com/preview/945/430/363/dungeons-dragons-elf-dark-elves-in-fiction-character-drow-elf.jpg")
 r6 = Race.create(name: "Dwarf", image_link: "https://www.pngfind.com/pngs/m/127-1271242_dwarf-transparent-image-dwarf-male-fighter-d-d.png")
 r7 = Race.create(name: "Orc", image_link: "https://www.pngfind.com/pngs/m/128-1289765_orc-png-transparent-image-orc-dnd-png-download.png")
-r8 = Race.create(name: "Wizard", image_link: "https://toppng.com/uploads/preview/credits-dungeons-and-dragons-evil-wizard-11563335047hv1zsl8tjh.png")
+r8 = Race.create(name: "Wizard", image_link: "https://www.nicepng.com/png/detail/16-164091_d-d-beyond-dungeons-and-dragons-wizard.png")
 
 Character.create(race_id: r2.id, character_race: r2.name, name: 'Bilbo Baggins', age: '1', affiliation: 'fellowship of the ring', appearance: 'short and old', personality: 'hungry', background: 'from shire')
 Character.create(race_id: r2.id, character_race: r2.name, name: 'Frodo Baggins', age: '2', affiliation: 'fellowship of the ring', appearance: 'short and young', personality: 'adventurous', background: 'inherited ring')
