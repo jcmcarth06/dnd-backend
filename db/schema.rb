@@ -10,6 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_08_25_213918) do
+
+  create_table "characters", force: :cascade do |t|
+    t.integer "race_id"
+    t.string "name"
+    t.integer "age"
+    t.string "affiliation"
+    t.string "appearance"
+    t.string "personality"
+    t.string "background"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["race_id"], name: "index_characters_on_race_id"
+  end
+
+  create_table "races", force: :cascade do |t|
+    t.string "name"
+    t.string "image_link"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
