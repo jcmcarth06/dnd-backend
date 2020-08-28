@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2020_08_25_213918) do
 
   create_table "characters", force: :cascade do |t|
     t.integer "race_id"
+    t.string "character_race"
     t.string "name"
     t.integer "age"
     t.string "affiliation"

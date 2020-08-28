@@ -7,7 +7,7 @@ class RacesController < ApplicationController
 
     def show 
         race = Race.find_by(id: params[:id])
-        # render RaceSerializer.new(races)
+        #render RaceSerializer.new(race)
     end
 
     def create

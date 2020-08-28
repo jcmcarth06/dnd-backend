@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post '/races' => 'races#create' #create a new race
 
   get '/characters' => 'characters#index' #view all created characters, regardless of race
-  get '/character/:id' => 'character#show' #view a specific character's attributes
-  post '/characters' => 'character#create' #create a new character
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get '/characters/:id' => 'characters#show' #view a specific character's attributes
+  post '/characters' => 'characters#create' #create a new character
+
 end
