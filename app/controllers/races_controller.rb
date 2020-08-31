@@ -7,12 +7,11 @@ class RacesController < ApplicationController
 
     def show 
         race = Race.find_by(id: params[:id])
-        #render RaceSerializer.new(race)
+        # render RaceSerializer.new(race)
     end
 
     def create
-        # race = Race.new(race_params) //write uniqueness validator
-        race.save
+        race = Race.create(race_params)
         render json: RaceSerializer.new(race)
     end
 

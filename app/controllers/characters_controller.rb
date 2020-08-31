@@ -10,10 +10,20 @@ class CharactersController < ApplicationController
         render json: CharacterSerializer.new(character)
     end
 
-    def create 
-        characters = params[:characters].map { |character| Character.find_or_create_by(name: character) }
-        race.characters << characters
-        character.save
+    def create
+        character = Character.create(character_params)
+        render json: CharacterSerializer.new(character)
+    end
+
+    def destroy
+        character = Character.find_by(id: params[:id])
+        character.destroy
+    end
+
+private
+
+    def character_params
+        params.require(:character).permit(:race, :name, :age, :appearance, :personality, :background, :affiliation, :race_id)
     end
 
 end
